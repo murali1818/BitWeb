@@ -1,0 +1,122 @@
+[
+  {
+    "productname": "Speakers",
+    "description": "High-quality speakers for immersive audio experience.",
+    "startingPrice": 200,
+    "endDate": "2024-12-31",
+    "owner": "John Doe",
+    "category": "Electronics",
+    "images": [
+      { "filename": "speakers_image1.jpg" },
+      { "filename": "speakers_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Laptop",
+    "description": "A powerful laptop for productivity and entertainment.",
+    "startingPrice": 800,
+    "endDate": "2024-12-31",
+    "owner": "Jane Smith",
+    "category": "Electronics",
+    "images": [
+      { "filename": "laptop_image1.jpg" },
+      { "filename": "laptop_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Smartwatch",
+    "description": "Smartwatch with fitness tracking and notification features.",
+    "startingPrice": 150,
+    "endDate": "2024-12-31",
+    "owner": "Alice Johnson",
+    "category": "Electronics",
+    "images": [
+      { "filename": "smartwatch_image1.jpg" },
+      { "filename": "smartwatch_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Running Shoes",
+    "description": "High-performance running shoes for athletes.",
+    "startingPrice": 80,
+    "endDate": "2024-12-31",
+    "owner": "Bob Williams",
+    "category": "Sports",
+    "images": [
+      { "filename": "runningshoes_image1.jpg" },
+      { "filename": "runningshoes_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Desk Lamp",
+    "description": "Modern desk lamp for brightening up your workspace.",
+    "startingPrice": 50,
+    "endDate": "2024-12-31",
+    "owner": "Eva Davis",
+    "category": "Home & Garden",
+    "images": [
+      { "filename": "desklamp_image1.jpg" },
+      { "filename": "desklamp_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Hiking Backpack",
+    "description": "Durable hiking backpack with multiple compartments.",
+    "startingPrice": 120,
+    "endDate": "2024-12-31",
+    "owner": "Sam Wilson",
+    "category": "Sports",
+    "images": [
+      { "filename": "hikingbackpack_image1.jpg" },
+      { "filename": "hikingbackpack_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Gaming Mouse",
+    "description": "Ergonomic gaming mouse for precision and comfort.",
+    "startingPrice": 60,
+    "endDate": "2024-12-31",
+    "owner": "Grace Martinez",
+    "category": "Electronics",
+    "images": [
+      { "filename": "gamingmouse_image1.jpg" },
+      { "filename": "gamingmouse_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Cookbook",
+    "description": "Collection of delicious recipes for home cooking.",
+    "startingPrice": 20,
+    "endDate": "2024-12-31",
+    "owner": "David Lee",
+    "category": "Books",
+    "images": [
+      { "filename": "cookbook_image1.jpg" },
+      { "filename": "cookbook_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Yoga Mat",
+    "description": "Premium yoga mat for comfortable practice sessions.",
+    "startingPrice": 40,
+    "endDate": "2024-12-31",
+    "owner": "Sophia Brown",
+    "category": "Sports",
+    "images": [
+      { "filename": "yogamat_image1.jpg" },
+      { "filename": "yogamat_image2.jpg" }
+    ]
+  },
+  {
+    "productname": "Headphones",
+    "description": "Noise-canceling headphones for immersive audio experience.",
+    "startingPrice": 150,
+    "endDate": "2024-12-31",
+    "owner": "Michael Wilson",
+    "category": "Electronics",
+    "images": [
+      { "filename": "headphones_image1.jpg" },
+      { "filename": "headphones_image2.jpg" }
+    ]
+  }
+]
