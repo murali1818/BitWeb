@@ -47,7 +47,6 @@ const EditProduct = () => {
     e.preventDefault();
     try {
       const response = await axios.put(`/updateproduct/${id}`, formData);
-      console.log(response.data.message);
       setMessage(response.data.message); // Set message
       setSuccess(true); // Set success to true
       setTimeout(() => {
