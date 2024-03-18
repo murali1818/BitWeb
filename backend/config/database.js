@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-
-// Accept URI as parameter
 const connectDatabase = (uri) => {
   if (!uri) {
       console.error("MongoDB URI is missing. Please ensure it's set in your environment variables.");

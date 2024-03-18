@@ -1,5 +1,5 @@
-const Product=require('../models/productmodels')
-const searchproduct=require('../utils/features')
+const Product=require('../models/productmodels');
+const searchproduct=require('../utils/features');
 //get all products
 exports.getProducts = async (req, res) => {
     try {
@@ -19,7 +19,6 @@ exports.getUserProducts = async (req, res) => {
         res.status(500).json({message: err.message});
     }
 };
-//add new products by user
 exports.addProducts = async (req, res) => {
     try {
         const { productname, description, startingPrice, endDate, category,image} = req.body;
@@ -90,33 +89,5 @@ exports.deleteProduct = async (req, res) => {
         res.status(500).json({ success: false, message: err.message });
     }
 };
-// Get products of the logged-in user
 
-exports.bidproduct = async (req, res) => {
-    const userId = req.user._id;
-    const username = req.user.name;
-    const {bidPrice} = req.body;
-    try {
-        const productId = req.params.id;
-        const product = await Product.findById(productId);
-        const currentprice=product.currentPrice
-        console.log(bidPrice);
-        console.log(currentprice);
-        if (bidPrice>currentprice) {
-            product.currentPrice = bidPrice;
-            product.bids.push({
-                username: username,
-                userId: userId,
-                Price: bidPrice
-            });
-            const updatedProduct = await product.save();
-            return res.status(200).json({ success: true, message: 'Bid placed successfully', product: updatedProduct });
-        } else {
-            return res.status(400).json({ success: false, message: 'Bid price must be higher than current price' ,currentprice});
-        }
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json({ success: false, message: 'Internal server error' });
-    }
-};
 

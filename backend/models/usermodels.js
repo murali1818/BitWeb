@@ -44,7 +44,7 @@ const passwordValidator = function(value) {
             createdAt : {
                 type: Date,
                 default: Date.now
-                }
+                },
         })
         userSchema.pre('save', async function (next){
             if(!this.isModified('password')){
