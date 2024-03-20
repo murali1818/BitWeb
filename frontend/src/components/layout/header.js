@@ -5,9 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {  Dropdown, Image, Form  } from 'react-bootstrap';
 const allowedCategories = ['select catogery','Electronics', 'Clothing', 'Home & Garden', 'Sports', 'Books','vehicles'];
-const Header = ({ isAuthenticated, user }) => {
-  const person = user;
-  console.log(person);
+const Header = ({ isAuthenticated}) => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">

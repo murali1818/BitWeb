@@ -13,6 +13,7 @@ export default function MyProduct() {
             try {
                 const response = await axios.get('/myproduct');
                 const userProducts = response.data;
+                console.log(userProducts);
                 setProducts(userProducts);
                 setLoading(false);
             } catch (error) {
@@ -63,10 +64,10 @@ export default function MyProduct() {
                                                     <p className="card-text">Current Price: {product.currentPrice}</p>
                                                     <p className="card-text">End Date: {String(product.endDate).substring(0, 10)}</p>
                                                     <p className="card-text">Category: {product.category}</p>
+                                                    <p className="card-text">Highest Bidder: {product.highestBid.username}</p>
                                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                         <button className="btn btn-block py-3" style={{ width: '100px', marginRight: '20px', borderRadius: '8%', background: '' }} onClick={() => handleEdit(product._id)}>Edit</button>
                                                         <button className="btn btn-block py-3" style={{ width: '100px', marginRight: '20px', borderRadius: '8%' }} onClick={() => handleDelete(product._id, product.productname)}>Delete</button>
-                                                        <button className="btn btn-block py-3" style={{ width: '100px', marginRight: '20px', borderRadius: '8%' }} onClick={() => handleDelete(product._id)}>Bids</button>
                                                     </div>
                                                 </div>
                                             </div>

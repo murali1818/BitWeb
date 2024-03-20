@@ -40,7 +40,6 @@ const Login = ({ onLogin }) => {
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
-
                             <div className="form-group">
                                 <label htmlFor="password_field">Password</label>
                                 <input
@@ -51,9 +50,7 @@ const Login = ({ onLogin }) => {
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
-
                             <Link to="/password/forgot" className="float-right mb-4">Forgot Password?</Link>
-
                             <button
                                 id="login_button"
                                 type="submit"

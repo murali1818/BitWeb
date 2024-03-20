@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-
+import { getUserProfile } from '../../Funtions/userfuntions';
+import { useState, useEffect } from 'react';
 export default function Profile() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -9,12 +8,12 @@ export default function Profile() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get('/myprofile');
-                setUser(response.data.user);
+                const userData = await getUserProfile(); // Call the getUserProfile function
+                setUser(userData);
                 setLoading(false);
             } catch (error) {
-                console.error('Error fetching user data:', error);
                 setLoading(false);
+                // Handle error as needed, e.g., display error message to the user
             }
         };
         fetchUserData();
@@ -22,6 +21,10 @@ export default function Profile() {
 
     if (loading) {
         return <div>Loading...</div>;
+    }
+
+    if (!user) {
+        return <div>Error: Failed to fetch user data</div>; // Display error message if user data is not available
     }
 
     return (

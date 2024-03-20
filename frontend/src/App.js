@@ -18,6 +18,8 @@ import MyProduct from './components/product/myproducts';
 import NotReady from './components/layout/notready';
 import EditProduct from './components/product/edit';
 import ProductDetails from './components/product/productdetails';
+import MyBids from './components/product/bid';
+import Watchlist from './components/product/watchlist';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,18 +29,14 @@ function App() {
       setIsAuthenticated(JSON.parse(storedAuth));
     }
   }, []);
-
-  const handleLogin = () => {
+  const handleLogin = async () => {
     setIsAuthenticated(true);
-    Cookies.set('isAuthenticated', true, { expires: 7 }); //Store authentication state in cookies for 7 days
-
+    Cookies.set('isAuthenticated', true, { expires: 7 }); 
   };
-
   const handleLogout = () => {
     setIsAuthenticated(false);
-    Cookies.remove('isAuthenticated'); //Remove authentication state from cookies
+    Cookies.remove('isAuthenticated');
   };
-
   return (
     <Router>
       <div className="App">
@@ -46,20 +44,21 @@ function App() {
         <div>
           <ToastContainer></ToastContainer>
           <Routes>
-            <Route path='/' element={<Home/>}/>
+            <Route path='/' element={<Home isAuthenticated={isAuthenticated} />}/>
             <Route path='/login' element={<Login onLogin={handleLogin} />} />
             <Route path='/logout' element={<Logout onLogout={handleLogout} />} />
             <Route path='/register' element={<Register></Register>} />
             <Route path='/password/forgot' element={<ForgotPassword/>}/>
-            <Route path='/myprofile' element={<Profile />} />
+            <Route path='/myprofile' element={<Profile/>} />
             <Route path='/Dashboard' element={<Dashboard/>} />
             <Route path="/myprofile/changepassword" element={<ChangePasswordForm/>} />
             <Route path="/addproduct" element={<AddProduct/>} />
             <Route path="/myproduct" element={<MyProduct/>} />
             <Route path="/myprofile/edit" element={<NotReady/>} />
-            <Route path="/watchlist" element={<NotReady/>} />
+            <Route path="/watchlist" element={<Watchlist/>} />
             <Route path="/productdetails/:id" element={<ProductDetails/>} />
             <Route path="/editproduct/:id" element={<EditProduct />} />
+            <Route path="/mybids" element={<MyBids/>} />
           </Routes>
         </div>
         <Footer />
@@ -67,5 +66,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
